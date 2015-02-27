@@ -53,26 +53,26 @@ YS
                 <div class="col-md-6">
                     <div id="controlButtons">
                     <ul class="list-connectivityMaps list-unstyled">
-                        <li><a href="#void" onclick="PopLayer_LC_LC()" id="cb1" class="controlButton">Population Distribution</a></li>
-                        <li><a href="#void" onclick="BBSLayer_LC_LC()" id="cb2" class="controlButton">Connectivity: Most common download speed</a></li>
-                        <li><a href="#void" onclick="Providers_LC_LC()" id="cb3" class="controlButton">Physicians distribution</a></li>
-                        <li><a href="#void" onclick="PCPRatio_LC_LC()" id="cb13" class="controlButton">Persons per Primary Care Provider per County</a></li>
-                        <li><a href="#void" onclick="ProvidersxPop_LC()" id="cb4" class="controlButton">Physicians and Population Distribution</a></li>
-                        <li><a href="#void" onclick="InfoAccess_LC_LC()" id="cb5" class="controlButton">Online Access to Health Information</a></li>
-                        <li><a href="#void" onclick="InfoAccessxPop_LC()" id="cb6" class="controlButton">Online Access to Health Information and Population Distribution</a></li>
-                        <li><a href="#void" onclick="InfoAccessxBBS_LC()" id="cb7" class="controlButton">Online Access to Health Information and Connectivity</a></li>
-                        <li><a href="#void" onclick="ProvidersxInfoAccess_LC()" id="cb8" class="controlButton">Access to People and Information</a></li>
-                        <li><a href="#void" onclick="ProvidersxObesity_LC()" id="cb11" class="controlButton">Obesity Prevalence and Provider Distribution</a></li>
-                        <li><a href="#void" onclick="InfoAccessxObesity_LC()" id="cb12" class="controlButton">Obesity Prevalence and Online Access to Health Information</a></li>
+                        <li><input id="sel-map1" name="connectMaps" type="radio" onclick="PopLayer_LC_LC()"> <label for="sel-map1" id="cb1" class="controlButton">Population Distribution</label></li>
+                        <li><input id="sel-map2" name="connectMaps" type="radio" onclick="BBSLayer_LC_LC()"> <label for="sel-map2" id="cb2" class="controlButton">Connectivity: Most common download speed</label></li>
+                        <li><input id="sel-map3" name="connectMaps" type="radio" onclick="Providers_LC_LC()"> <label for="sel-map3" id="cb3" class="controlButton">Physicians distribution</label></li>
+                        <li><input id="sel-map4" name="connectMaps" type="radio" onclick="PCPRatio_LC_LC()"> <label for="sel-map4" id="cb13" class="controlButton">Persons per Primary Care Provider per County</label></li>
+                        <li><input id="sel-map5" name="connectMaps" type="radio" onclick="ProvidersxPop_LC()"> <label for="sel-map5" id="cb4" class="controlButton">Physicians and Population Distribution</label></li>
+                        <li><input id="sel-map6" name="connectMaps" type="radio" onclick="InfoAccess_LC_LC()"> <label for="sel-map6" id="cb5" class="controlButton">Online Access to Health Information</label></li>
+                        <li><input id="sel-map7" name="connectMaps" type="radio" onclick="InfoAccessxPop_LC()"> <label for="sel-map7" id="cb6" class="controlButton">Online Access to Health Information and Population Distribution</label></li>
+                        <li><input id="sel-map8" name="connectMaps" type="radio" onclick="InfoAccessxBBS_LC()"> <label for="sel-map8" id="cb7" class="controlButton">Online Access to Health Information and Connectivity</label></li>
+                        <li><input id="sel-map9" name="connectMaps" type="radio" onclick="ProvidersxInfoAccess_LC()"> <label for="sel-map9" id="cb8" class="controlButton">Access to People and Information</label></li>
+                        <li><input id="sel-map10" name="connectMaps" type="radio" onclick="ProvidersxObesity_LC()"> <label for="sel-map10" id="cb11" class="controlButton">Obesity Prevalence and Provider Distribution</label></li>
+                        <li><input id="sel-map11" name="connectMaps" type="radio" onclick="InfoAccessxObesity_LC()"> <label for="sel-map11" id="cb12" class="controlButton">Obesity Prevalence and Online Access to Health Information</label></li>
                     </ul>
                     
                         <ul class="list-detailMaps list-unstyled hide">
-						<li><input id="chk-map1" type="checkbox"> <label for="chk-map1" id="link-connectivity" href="#void" onclick="BBSLayer_LC()" class="controlButton">Connectivity: Most common download speed</label></li>
-                        <li><input id="chk-map2" type="checkbox"> <label for="chk-map2" onclick="ObesityLayer_LC()" class="controlButton">Obesity Prevalence</label></li>
-                        <li><input id="chk-map3" type="checkbox"> <label for="chk-map3" onclick="PopLayer_LC()" class="controlButton">Population by County</label></li>
-                        <li><input id="chk-map4" type="checkbox"> <label for="chk-map4" onclick="infoAccess_LC()" class="controlButton">Online Access to Health Information</label></li>
-                        <li><input id="chk-map5" type="checkbox"> <label for="chk-map5" onclick="providers_LC()" class="controlButton">Physicians Distribution</label></li>
-                        <li><input id="chk-map6" type="checkbox"> <label for="chk-map6" onclick="PCPRatio_LC()" class="controlButton">Persons per Primary Care Provider per County</label></li>
+						<li><input id="chk-map1" type="checkbox" onclick="BBSLayer_LC()"> <label for="chk-map1" id="link-connectivity" class="controlButton">Connectivity: Most common download speed</label></li>
+                        <li><input id="chk-map2" type="checkbox" onclick="ObesityLayer_LC()"> <label for="chk-map2" class="controlButton">Obesity Prevalence</label></li>
+                        <li><input id="chk-map3" type="checkbox" onclick="PopLayer_LC()"> <label for="chk-map3" class="controlButton">Population by County</label></li>
+                        <li><input id="chk-map4" type="checkbox" onclick="infoAccess_LC()"> <label for="chk-map4" class="controlButton">Online Access to Health Information</label></li>
+                        <li><input id="chk-map5" type="checkbox" onclick="providers_LC()"> <label for="chk-map5" class="controlButton">Physicians Distribution</label></li>
+                        <li><input id="chk-map6" type="checkbox" onclick="PCPRatio_LC()"> <label for="chk-map6" class="controlButton">Persons per Primary Care Provider per County</label></li>
 </ul>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ YS
                 <strong>Data Sources</strong><br>
                 <p>Sources of information and data include:</p>
                 <ul>
-                    <li><strong>Connectivity</strong> &ndash; Data on connectivity was downloaded from the <a href="http://www.broadbandmap.gov">National Broadband Map</a>, a collaboration betwee NIST and the FCC.</li>
+                    <li><strong>Connectivity</strong> &ndash; Data on connectivity was downloaded from the <a href="http://www.broadbandmap.gov">National Broadband Map</a>, a collaboration betwee NTIA and the FCC.</li>
                     <li><strong>Catographic Data</strong> &ndash; Cartographic boundary shape files were downloaded from the <a href="http://www.census.gov/geo/maps-data/data/cbf/cbf_counties.html">United States Census Bureau.</a></li>
                     <li><strong>People</strong> &ndash; The number and distribution of providers was determined through </li>
                     <li><strong>Supports</strong> &ndash; The primary source of information regarding availaibility of telehealth connectivity to nonclinical health sources was the <a href="http://www.matrc.org">Mid-Atlantic Telehealth Resource Center</a></li>
