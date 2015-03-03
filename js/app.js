@@ -1,7 +1,13 @@
 
 
 $(document).ready(function(){
-  //displayIntro();
+    $('[data-toggle="collapse"]').click(function(){ 
+		if ($(this).is('.collapsed')) {
+			$(this).find('.glyphicon').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down');		
+		} else {
+			$(this).find('.glyphicon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');		
+		}		
+	});
   
   $('.layer-switch').on('click', 'a', function(){
 	var $this = $(this),
