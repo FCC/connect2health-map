@@ -143,7 +143,6 @@ function explore(){
 
 };
 
-var baseMap=L.mapbox.tileLayer('yahya1399.kkoj3cf3');
 var map = L.mapbox.map('map', 'fcc.map-kzt95hy6',{	
       detectRetina: true,
       zoomControl: true,
@@ -431,7 +430,7 @@ function providers_LC(){
     var maps={
       infoAccess: 'yahya1399.k4akbj4i',
       providers: 'yahya1399.njii19k9',
-      pop:'yahya1399.l3zhncdi'
+      pop:'yahya1399.13zhncdi'
     };
     var tileLayers={
       infoAccess: L.mapbox.tileLayer(maps.infoAccess),
