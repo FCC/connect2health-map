@@ -149,8 +149,8 @@ var map = L.mapbox.map('map', 'fcc.map-kzt95hy6',{
       scrollWheelZoom:false
   }).setView([37.95, -79.5], 7);
 
-var vamap=L.mapbox.tileLayer('yahya1399.dawf80k9');
-var vamap_gridLayer=L.mapbox.gridLayer('yahya1399.dawf80k9');
+var vamap=L.mapbox.tileLayer('fcc.wnbwewmi');
+var vamap_gridLayer=L.mapbox.gridLayer('fcc.wnbwewmi');
 var interactiveLayerGroupVamap = L.layerGroup([
   vamap,
   vamap_gridLayer
@@ -196,8 +196,8 @@ function resetPopCount(){
 
 
 /* BBS */
-var BBS=L.mapbox.tileLayer('yahya1399.cqiftj4i');
-var BBS_gridLayer=L.mapbox.gridLayer('yahya1399.cqiftj4i');
+var BBS=L.mapbox.tileLayer('fcc.icrw9udi');
+var BBS_gridLayer=L.mapbox.gridLayer('fcc.icrw9udi');
 var interactiveLayerGroupBBS = L.layerGroup([
   BBS,
   BBS_gridLayer]);
@@ -250,8 +250,8 @@ var interactiveLayerGroupBBS = L.layerGroup([
     });
 
 /* OBESITY */
-var obesity=L.mapbox.tileLayer('yahya1399.lzxb6gvi',{opacity:0.75});
-var obesity_gridLayer=L.mapbox.gridLayer('yahya1399.lzxb6gvi');
+var obesity=L.mapbox.tileLayer('fcc.ke2ymn29',{opacity:0.75});
+var obesity_gridLayer=L.mapbox.gridLayer('fcc.ke2ymn29');
 
 var interactiveLayerGroupObesity = L.layerGroup([
   obesity,
@@ -279,8 +279,8 @@ var interactiveLayerGroupObesity = L.layerGroup([
     });
 
 /* PCP RATIO */
-var pcpratio=L.mapbox.tileLayer('yahya1399.s0ykfbt9',{opacity:0.75});
-var pcpratio_gridLayer=L.mapbox.gridLayer('yahya1399.s0ykfbt9');
+var pcpratio=L.mapbox.tileLayer('fcc.jvwpnwmi',{opacity:0.75});
+var pcpratio_gridLayer=L.mapbox.gridLayer('fcc.jvwpnwmi');
 
 var interactiveLayerGroupPCP = L.layerGroup([
   pcpratio,
@@ -309,8 +309,8 @@ var interactiveLayerGroupPCP = L.layerGroup([
     });
 	
 /* POPULATION */
-var pop=L.mapbox.tileLayer('yahya1399.13zhncdi',{opacity:0.75});
-var pop_gridLayer=L.mapbox.gridLayer('yahya1399.13zhncdi');
+var pop=L.mapbox.tileLayer('fcc.n2iysyvi',{opacity:0.75});
+var pop_gridLayer=L.mapbox.gridLayer('fcc.n2iysyvi');
 
 var interactiveLayerGroupPop = L.layerGroup([
   pop,
@@ -428,9 +428,9 @@ function providers_LC(){
 
 /* LAYERS CONTROLS */
     var maps={
-      infoAccess: 'yahya1399.k4akbj4i',
-      providers: 'yahya1399.njii19k9',
-      pop:'yahya1399.13zhncdi'
+      infoAccess: 'fcc.1vfmkj4i',
+      providers: 'fcc.vvn7y14i',
+      pop:'fcc.n2iysyvi'
     };
     var tileLayers={
       infoAccess: L.mapbox.tileLayer(maps.infoAccess),
