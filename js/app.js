@@ -39,27 +39,7 @@ $(document).ready(function(){
 });
 
 //FROM: http://danzel.github.io/Leaflet.utfgrid/example/layers.html
-L.mapbox.accessToken = 'pk.eyJ1IjoieWFoeWExMzk5IiwiYSI6IjNYak5OOGMifQ.oCEwBMambvUHxfLJbMp6gg';
-/*
-var currentChoice="";
-  $(".notselected").click(function(){
-    if (currentChoice==""){
-      currentChoice=$(this).attr('id');
-      $(this).toggleClass("selected");
-    }else if($(this).attr('id')=='story'){
-      currentChoice='story';
-      $(this).toggleClass("selected");
-      $("#explore").toggleClass("notselected");
-    }else if($(this).attr('id')=='explore'){
-      currentChoice='explore';
-      $(this).toggleClass("selected");
-      $("#story").toggleClass("notselected");
-    };
-  });
-  */
-
-
-
+L.mapbox.accessToken = 'pk.eyJ1IjoiZmNjIiwiYSI6IlA5cThBQTQifQ.EbifLm_7JkQ1uI_0_qYEAA';
 
 function story(){ 
   $("#maptitle").empty();
@@ -242,11 +222,10 @@ var interactiveLayerGroupBBS = L.layerGroup([
       } else {
         document.getElementById('hover').innerHTML = 'hover: nothing';
       }
-      //console.log('mouseover: ' + e.data);
     });
+	
     BBS_gridLayer.on('mouseout', function (e) {
       $("#mainoutput").empty();
-      //console.log('mouseout: ' + e.data);
     });
 
 /* OBESITY */
@@ -375,7 +354,6 @@ function infoAccess_LC(){
         });
         gridLayers.infoAccess.on('mouseout', function (e) {
           $("#mainoutput").empty();
-          //console.log('mouseout: ' + e.data);
         });
       };
 };
@@ -416,11 +394,9 @@ function providers_LC(){
       } else {
         document.getElementById('hover').innerHTML = 'hover: nothing';
       }
-      //console.log('mouseover: ' + e.data);
     });
     gridLayers.providers.on('mouseout', function (e) {
       $("#mainoutput").empty();  
-      //console.log('mouseout: ' + e.data);
     });
   };
 };
