@@ -36,6 +36,17 @@ footer { border-top: 1px solid #DDDDDD; font-size: 14px; margin-top: 30px; paddi
 #legends>div+div { margin-top: 15px; }
 #controlButtons { margin-left: 10px; }
 
+#legends>div { overflow:hidden; }
+.legend-sq, .legend-circle { white-space: nowrap; width: 250px; }
+.legend-sq span { display: inline-block; height: 25px; width: 30px; }
+.legend-sq .legend-label { font-size: 12px; vertical-align: middle; }
+
+.label-row:before, .label-row:after { content: " "; display: table; }
+.label-row .legend-label { float: left; white-space: normal; width: 85px; word-wrap: break-word; }
+.label-row .legend-label:last-child { float: right; text-align: right; }
+
+.legend-circle .circle { border-radius: 50px; display: inline-block; height: 50px; background: red; margin-right: 25px; vertical-align: middle; width: 50px; }
+
 #hover, #click, #output { display: none; visibility: hidden; }
 
 .glyphicon { font-size: 10px; margin-right: 3px; position: relative; top: -1px; }
