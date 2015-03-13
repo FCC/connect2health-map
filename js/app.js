@@ -1,4 +1,32 @@
+var legendPop = {
+		labels: ['10,000', '100,000'],
+		colors: ['#f1f6ae', '#ecd57d', '#ed9c52', '#ec6d44', '#d8463a', '#b23341'],
+};
 
+var legendBBS = {
+		labels: ['1,000', '0.2'],
+		colors: ['#1b5c01', '#94d639', '#adde63', '#ff9473', '#ff6342', '#ff3118', '#ff0000', '#d60000'],
+};
+
+var legendObesity = {
+		labels: ['20%', '40%'],
+		colors: ['#22b14c', '#ffffb2', '#fed976', '#feb24c', '#fd8d3c', '#fc4e2a', '#e31a1c', '#b10026'],
+};
+
+var legendPCPRatio = {
+		labels: ['2,000', '20,000'],
+		colors: ['#4ca54d', '#ffff00', '#ffcc00', '#ff9900', '#ff6600', '#ff3300', '#ff0000'],
+};
+
+var legendInfoAccess = {
+		labels: ['100', '5'],
+		colors: ['#cc0202', '#cc0202', '#cc0202', '#cc0202', '#cc0202'],
+};
+
+var legendPhysicians = {
+		labels: ['2,000', '20'],
+		colors: ['#396a9c', '#396a9c', '#396a9c', '#396a9c', '#396a9c'],
+};
 
 $(document).ready(function(){
     $('[data-toggle="collapse"]').click(function(){ 
@@ -45,11 +73,11 @@ function story(){
   $("#maptitle").empty();
   $("#freqsTD").empty();
 
-  $("#legend_bbs").empty();
-  $("#legend_obesity").empty();
-  $("#legend_pop").empty();
-  $("#legend_infoaccess").empty();
-  $("#legend_physicians").empty();
+  $("#legend_bbs").empty().addClass('hide');
+  $("#legend_obesity").empty().addClass('hide');
+  $("#legend_pop").empty().addClass('hide');
+  $("#legend_infoaccess").empty().addClass('hide');
+  $("#legend_physicians").empty().addClass('hide');
   clearMap();
   
   $(".controlButton").on("click", function() {
@@ -94,12 +122,12 @@ function story(){
 
 
 function explore(){
-  $("#legend_bbs").empty();
-  $("#legend_obesity").empty();
-  $("#legend_pop").empty();
-  $("#legend_infoaccess").empty();
-  $("#legend_physicians").empty();
-  $("#legend_pcpratio").empty();
+  $("#legend_bbs").empty().addClass('hide');
+  $("#legend_obesity").empty().addClass('hide');
+  $("#legend_pop").empty().addClass('hide');
+  $("#legend_infoaccess").empty().addClass('hide');
+  $("#legend_physicians").empty().addClass('hide');
+  $("#legend_pcpratio").empty().addClass('hide');
 
   $("#maptitle").empty();
   $("#notes").empty();
@@ -321,7 +349,7 @@ function infoAccess_LC(){
       $("#output").append("layerStatus.infoAccess: "+layerStatus.infoAccess);
       if(layerStatus.infoAccess==1){
         layerStatus.infoAccess=0;
-        $("#legend_infoaccess").empty();
+        $("#legend_infoaccess").empty().addClass('hide');
         $("#output").append(" | layerStatus.infoAccess=1");
         $("#infoAccessdiv-outter").empty();
         $("#infoAccessdiv-outter").append("<div id='infoAccessdiv' class='inactive'>Use of online resources: chronic disease information</div>");
@@ -329,7 +357,10 @@ function infoAccess_LC(){
         map.removeLayer(gridLayers.infoAccess);
       }else{
         layerStatus.infoAccess=1;
-        $("#legend_infoaccess").append("<strong>Access to Chronic Disease Information (score)</strong><br><img src='images/infoaccess.png' width='156' height='57'>")
+        //$("#legend_infoaccess").append("<strong>Access to Chronic Disease Information (score)</strong><br><img src='images/infoaccess.png' width='156' height='57'>")
+		$("#legend_infoaccess").append("<strong>Access to Chronic Disease Information (score)</strong><br>");
+		legendCircle($("#legend_infoaccess"), legendInfoAccess);
+		
         $("#output").append(" | layerStatus.infoAccess=0");
         $("#infoAccessdiv-outter").empty();
         $("#infoAccessdiv-outter").append("<div id='infoAccessdiv' class='active'>Use of online resources: chronic disease information</div>");
@@ -363,7 +394,7 @@ function providers_LC(){
       $("#output").append("layerStatus.providers: "+layerStatus.providers);
       if(layerStatus.providers==1){
         layerStatus.providers=0;
-        $("#legend_physicians").empty();
+        $("#legend_physicians").empty().addClass('hide');
         $("#output").append(" | layerStatus.providers=1");
         $("#providersdiv-outter").empty();
         $("#providersdiv-outter").append("<div id='providersdiv' class='inactive'>Numbers of Providers by County</div>");
@@ -372,7 +403,10 @@ function providers_LC(){
 
       }else{
         layerStatus.providers=1;
-        $("#legend_physicians").append("<strong>Number of Physicians</strong><br><img src='images/physicians.png' width='174' height='63'>")
+        //$("#legend_physicians").append("<strong>Number of Physicians</strong><br><img src='images/physicians.png' width='174' height='63'>")
+		$("#legend_physicians").append("<strong>Number of Physicians</strong><br>");
+		legendCircle($("#legend_physicians"), legendPhysicians);
+		
         $("#output").append(" | layerStatus.providers=0");
         $("#providersdiv-outter").empty();
         $("#providersdiv-outter").append("<div id='providersdiv' class='active'>Numbers of Providers by County</div>");
@@ -450,12 +484,12 @@ function clearMap(){
   layerStatus.PopLayer=0;
   layerStatus.PCPRatioLayer=0;
 
-  $("#legend_bbs").empty();
-  $("#legend_obesity").empty();
-  $("#legend_pop").empty();
-  $("#legend_infoaccess").empty();
-  $("#legend_physicians").empty();
-  $("#legend_pcpratio").empty();
+  $("#legend_bbs").empty().addClass('hide');
+  $("#legend_obesity").empty().addClass('hide');
+  $("#legend_pop").empty().addClass('hide');
+  $("#legend_infoaccess").empty().addClass('hide');
+  $("#legend_physicians").empty().addClass('hide');
+  $("#legend_pcpratio").empty().addClass('hide');
 };
 
 
@@ -463,11 +497,13 @@ function clearMap(){
     if(layerStatus.ObesityLayer==0){
       interactiveLayerGroupObesity.addTo(map);
       layerStatus.ObesityLayer=1;      
-      $("#legend_obesity").append("<strong>Obesity Prevalence (%)</strong><br><img src='images/obesity.png' width='221' height='48'>")
+      //$("#legend_obesity").append("<strong>Obesity Prevalence (%)</strong><br><img src='images/obesity.png' width='221' height='48'>")
+	  $("#legend_obesity").append("<strong>Obesity Prevalence (%)</strong><br>");
+	  legendSquare($("#legend_obesity"), legendObesity);
     }else{
       map.removeLayer(interactiveLayerGroupObesity);
       layerStatus.ObesityLayer=0;
-      $("#legend_obesity").empty();
+      $("#legend_obesity").empty().addClass('hide');
     };
   };
 
@@ -475,11 +511,13 @@ function clearMap(){
     if(layerStatus.PCPRatioLayer==0){
       interactiveLayerGroupPCP.addTo(map);
       layerStatus.PCPRatioLayer=1;      
-      $("#legend_pcpratio").append("<strong>PCP Ratio</strong><br><img src='images/pcp_ratio.png' width='221' height='48'>")
+      //$("#legend_pcpratio").append("<strong>PCP Ratio</strong><br><img src='images/pcp_ratio.png' width='221' height='48'>")
+	  $("#legend_pcpratio").append("<strong>PCP Ratio</strong><br>");
+	  legendSquare($("#legend_pcpratio"), legendPCPRatio);
     }else{
       map.removeLayer(interactiveLayerGroupPCP);
       layerStatus.PCPRatioLayer=0;
-      $("#legend_pcpratio").empty();
+      $("#legend_pcpratio").empty().addClass('hide');
     };
   };
 
@@ -488,11 +526,13 @@ function clearMap(){
     if(layerStatus.BBSLayer==0){
       interactiveLayerGroupBBS.addTo(map);
       layerStatus.BBSLayer=1;
-      $("#legend_bbs").append("<strong>Most Common Download Speed (Mbps)</strong><br><img src='images/connectivity2.png' width='200' height='44'>")
+      //$("#legend_bbs").append("<strong>Most Common Download Speed (Mbps)</strong><br><img src='images/connectivity2.png' width='200' height='44'>")
+	 $("#legend_bbs").append("<strong>Most Common Download Speed (Mbps)</strong><br>");
+	 legendSquare($("#legend_bbs"), legendBBS);
     }else{
       map.removeLayer(interactiveLayerGroupBBS);   
       layerStatus.BBSLayer=0;
-      $("#legend_bbs").empty();
+      $("#legend_bbs").empty().addClass('hide');
     };
 
   };
@@ -501,7 +541,9 @@ function clearMap(){
     if(layerStatus.PopLayer==0){
       interactiveLayerGroupPop.addTo(map);
       layerStatus.PopLayer=1;
-      $("#legend_pop").append("<strong>Population Distribution</strong><br><img src='images/pop.png' width='192' height='56'>")
+      //$("#legend_pop").append("<strong>Population Distribution</strong><br><img src='images/pop.png' width='192' height='56'>")
+	  $("#legend_pop").append("<strong>Population Distribution</strong><br>");
+	  legendSquare($("#legend_pop"), legendPop);
     }else{
       map.removeLayer(interactiveLayerGroupPop);   
       layerStatus.PopLayer=0;
@@ -692,3 +734,39 @@ function printObesityInfo(thisObject){
 function printPopInfo(thisObject){
   var thisState=thisObject.state;
 };
+
+function legendSquare(container, legendData) { 
+	var i = 0,
+		size = legendData.colors.length,
+		span = '',
+		width = 250/size + 'px';		
+	
+	for	(var i=0; i<size; i++) { 
+		span += '<span style="background-color: ' + legendData.colors[i] + '; width: ' + width + '"></span>';					
+	}
+		
+	legendLabel1 = '<span class="legend-label">' +  legendData.labels[0] + '</span>';
+	legendLabel2 = '<span class="legend-label">' +  legendData.labels[1] + '</span>';                               
+	
+	container.append('<div class="legend-sq">' + span + '<div class="label-row">' + legendLabel1 + legendLabel2 + '</div></div>'); 
+	container.removeClass('hide');
+}
+
+function legendCircle(container, legendData) { 
+	var i = 0,
+		size = legendData.colors.length,
+		span = '',
+		height = 60,
+		width = 250/size + 'px';		
+	
+	for	(var i=0; i<size; i++) { 
+		height = height - 10;
+		span += '<span class="circle" style="background-color: ' + legendData.colors[i] + '; height: ' + height + 'px; width: ' + height + 'px"></span>';					
+	}
+		
+	legendLabel1 = '<span class="legend-label">' +  legendData.labels[0] + '</span>';
+	legendLabel2 = '<span class="legend-label">' +  legendData.labels[1] + '</span>';                               
+	
+	container.append('<div class="legend-circle">' + span + '<div class="label-row">' + legendLabel1 + legendLabel2 + '</div></div>'); 
+	container.removeClass('hide');
+}
