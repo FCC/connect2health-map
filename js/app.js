@@ -1,3 +1,7 @@
+/* 
+  Code provided by Connect2HealthFCC Task Force 
+*/
+
 var legendPop = {
 		labels: ['10,000', '100,000'],
 		colors: ['#f1f6ae', '#ecd57d', '#ed9c52', '#ec6d44', '#d8463a', '#b23341'],
@@ -24,7 +28,7 @@ var legendInfoAccess = {
 };
 
 var legendPhysicians = {
-		labels: ['2,000', '20'],
+		labels: ['> 2,000', '10'],
 		colors: ['#396a9c', '#396a9c', '#396a9c', '#396a9c', '#396a9c'],
 };
 
