@@ -12,6 +12,7 @@ a:visited { color:#55A3CA; }
 a:hover { text-decoration: underline; }
 li { margin-bottom: 5px; }
 label { cursor: pointer; font-weight: normal; }
+.lastUpdated { font-style: italic; margin-top: -40px; text-align: right; }
 
 /* Header */
 header { background: #373A41; color:#FFF; margin: 0; padding-bottom: 9px; min-height: 60px; padding-top: 20px; }
@@ -39,13 +40,14 @@ footer { border-top: 1px solid #DDDDDD; font-size: 14px; margin-top: 30px; paddi
 #legends>div { overflow:hidden; }
 .legend-sq, .legend-circle { white-space: nowrap; width: 250px; }
 .legend-sq span { display: inline-block; height: 25px; width: 30px; }
-.legend-sq .legend-label { font-size: 12px; vertical-align: middle; }
+.legend-sq .legend-label { vertical-align: middle; }
 
 .label-row:before, .label-row:after { content: " "; display: table; }
 .label-row .legend-label { float: left; white-space: normal; width: 85px; word-wrap: break-word; }
 .label-row .legend-label:last-child { float: right; text-align: right; }
 
 .legend-circle .circle { border-radius: 50px; display: inline-block; height: 50px; background: red; margin-right: 25px; vertical-align: middle; width: 50px; }
+.legend-circle .legend-label:first-child { width: 50px; text-align: center; }
 
 #hover, #click, #output { display: none; visibility: hidden; }
 
