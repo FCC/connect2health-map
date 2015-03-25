@@ -14,7 +14,7 @@ a:visited { color:#55A3CA; }
 a:hover { text-decoration: underline; }
 li { margin-bottom: 5px; }
 label { cursor: pointer; font-weight: normal; }
-.lastUpdated { font-style: italic; margin-top: -40px; text-align: right; }
+
 
 /* Header */
 header { background: #373A41; color:#FFF; margin: 0; padding-bottom: 9px; min-height: 60px; padding-top: 20px; }
@@ -54,3 +54,11 @@ footer { border-top: 1px solid #DDDDDD; font-size: 14px; margin-top: 30px; paddi
 #hover, #click, #output { display: none; visibility: hidden; }
 
 .glyphicon { font-size: 10px; margin-right: 3px; position: relative; top: -1px; }
+
+@media only screen and (min-width : 320px) {
+	.lastUpdated { margin-top: -20px; text-align: left; }
+}
+
+@media only screen and (min-width : 768px) {
+	.lastUpdated { font-style: italic; margin-top: -40px; text-align: right; }
+}
