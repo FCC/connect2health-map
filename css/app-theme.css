@@ -6,6 +6,7 @@ h2, h3, h4, h5 { color: #212326; font-weight: 600; }
 h1 { font-size: 30px; font-weight: 600; margin: 20px 0 20px; }
 h2 { font-size: 22px; }
 h3 { font-size: 16px; font-weight: 700; }
+section { margin-bottom: 20px; }
 blockquote { float: right; margin-left: 20px;}
 
 a:link { color: #55A3CA; text-decoration: none; }
