@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--
-Dear Reader,
-
-Welcome to the part of the page that no body reads. Except you. And me. But that's only 'cause I am writing this. So, it's really only you.
-
-Anyhoo...please feel free to take what you will. Spread the love. We all stand on the shoulders of others. Just don't fall off. The view is better from the top.
-
-Peace!
-
-YS
+    __________________   __  ___                
+   / ____/ ____/ ____/  /  |/  /___ _____  _____
+  / /_  / /   / /      / /|_/ / __ `/ __ \/ ___/
+ / __/ / /___/ /___   / /  / / /_/ / /_/ (__  ) 
+/_/    \____/\____/  /_/  /_/\__,_/ .___/____/  
+                                 /_/            
 -->
 
 <head>
@@ -29,18 +26,8 @@ YS
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-10 col-sm-11 col-md-11"><a class="link-home" href="http://fcc.gov">FCC</a></div>
-                <div class="col-xs-2 col-sm-1 col-md-1"><a class="link-about" href="#about">About</a></div>
-            </div>
-        </div>
-    </header>
     <main class="container">
         <article>
-            <h1>Connectivity &amp; Health: Virginia <small>(Phase 1)</small></h1>
-            <p class="lastUpdated">Last updated: 03/25/2015</p>
             <div class="map-container">
                 <div id="map"></div>
                 <div id="maptitle"></div>
@@ -140,7 +127,7 @@ YS
                     </div>
                 </div>
             </div>
-            <hr>
+			<div id="about_div" style="height: 810px; overflow-y: auto;">
             <section>
                 <h2 id="about">About</h2>
                 <blockquote>
@@ -155,9 +142,9 @@ YS
                 <p>Learn more about <a href="http://www.fcc.gov/events/fcc-commissioner-clyburn-and-fcc-connect2health-task-force-host-telehealth-seminar" target="new">broadband-enabled health connectivity in Virginia</a>.</p>
                 
                 <h3>Community Engagement</h3>
-<p>One of the goals of the Phase I Broadband-Health-Connectivity Snapshot maps is to elicit feedback on ways to improve the methodology for researching the current state of affairs at the intersection of broadband, connectivity, and health. We have made a first attempt to gather and display data in a way that is meaningful. Now, we would like to hear your thoughts. What other data points would be useful to display? What resources can be used to gather this data? Are there other changes in methodology you suggest? What additional insights can you elicit from these maps? </p>
- 
-<p>The Connect2HealthFCC Task Force welcomes your suggestions and feedback as we continue to develop the Broadband-Health-Connectivity Snapshot maps. Please submit comments to <a href="mailto:engagec2h@fcc">engageC2H@fcc.gov</a>.</p>
+				<p>One of the goals of the Phase I Broadband-Health-Connectivity Snapshot maps is to elicit feedback on ways to improve the methodology for researching the current state of affairs at the intersection of broadband, connectivity, and health. We have made a first attempt to gather and display data in a way that is meaningful. Now, we would like to hear your thoughts. What other data points would be useful to display? What resources can be used to gather this data? Are there other changes in methodology you suggest? What additional insights can you elicit from these maps? </p>
+				 
+				<p>The Connect2HealthFCC Task Force welcomes your suggestions and feedback as we continue to develop the Broadband-Health-Connectivity Snapshot maps. Please submit comments to <a href="mailto:engagec2h@fcc">engageC2H@fcc.gov</a>.</p>
             </section>
             <section>
                 <h3><a class="collapsed" href="#void" data-toggle="collapse" data-target="#insights" aria-expanded="false" aria-controls="methodology"><span class="glyphicon glyphicon-chevron-right"></span>Preliminary Insights</a></h3>
@@ -204,52 +191,22 @@ YS
                     </ul>
                 </div>
             </section>
-        </article>
-        <!-- 
+			<div>
+		</article>
+			<!-- 
 
             Providers InfoAccess BBS Obesity Population
-Providers                 X       X     X     X
-InfoAccess                        X     X     X
-BBS                                           X
-Obesity 
-Population          
+			Providers                 X       X     X     X
+			InfoAccess                        X     X     X
+			BBS                                           X
+			Obesity 
+			Population          
 
--->
+			-->
         <div id='hover'></div>
         <div id='click'></div>
         <div id='output'></div>
-    </main>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <address class="col-sm-6 col-md-6">
-                    Federal Communications Commission
-                    <br> 445 12th Street SW
-                    <br> Washington, DC 20554
-                    <br> Phone: 1-888-225-5322
-                    <br> TTY: 1-888-835-5322
-                    <br> Fax: 1-866-418-0232
-                    <br>
-                    <a href="http://www.fcc.gov/contact-us" title="More FCC Contact Information">More FCC Contact Information...</a>
-                    <br>
-                </address>
-                <ul class="list-unstyled col-sm-3 col-md-3">
-                    <li><a href="http://www.fcc.gov/rss" title="RSS">RSS</a></li>
-                    <li><a href="http://www.fcc.gov/encyclopedia/privacy-policy" title="Privacy Policy">Privacy Policy</a></li>
-                    <li><a href="http://www.fcc.gov/comment-policy" title="Moderation Policy">Moderation Policy</a></li>
-                    <li><a href="http://www.fcc.gov/encyclopedia/website-notices" title="Website Policies &amp; Notices">Website Policies &amp; Notices</a></li>
-                    <li><a href="http://www.fcc.gov/encyclopedia/required-plug-ins-players-and-readers" title="Required Browser &amp; Plug-ins">Required Browser &amp; Plug-ins</a></li>
-                </ul>
-                <ul class="list-unstyled col-sm-3 col-md-3">
-                    <li><a href="http://www.fcc.gov/foia" title="FOIA">FOIA</a></li>
-                    <li><a href="http://www.fcc.gov/encyclopedia/no-fear-act-data" title="No Fear Act Data">No Fear Act Data</a></li>
-                    <li><a href="http://www.fcc.gov/open" title="Open Government Directive">Open Government Directive</a></li>
-                    <li><a href="http://www.fcc.gov/encyclopedia/plain-writing-fcc" title="Plain Writing Act">Plain Writing Act</a></li>
-                    <li><a href="http://www.fcc.gov/encyclopedia/american-recovery-and-reinvestment-act-2009" title="2009 Recovery and Reinvestment Act">2009 Recovery and Reinvestment Act</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    </main>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
@@ -258,5 +215,4 @@ Population
     <script src="https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js"></script>
     <script src="js/app.js"></script>
 </body>
-
 </html>
