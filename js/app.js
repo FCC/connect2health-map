@@ -33,7 +33,9 @@ var legendPhysicians = {
 };
 
 $(document).ready(function(){
-    $('[data-toggle="collapse"]').click(function(){ 
+    $('[data-toggle="collapse"]').click(function(e) { 
+      e.preventDefault();
+      
 		if ($(this).is('.collapsed')) {
 			$(this).find('.glyphicon').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down');		
 		} else {
