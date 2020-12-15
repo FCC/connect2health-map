@@ -135,11 +135,13 @@ function explore() {
 
 };
 
-var map = L.mapbox.map('map', 'fcc.map-kzt95hy6', {
+var map = L.map('map',  {
     detectRetina: true,
     zoomControl: true,
     scrollWheelZoom: false
 }).setView([37.95, -79.5], 7);
+
+L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10').addTo(map);
 
 var vamap = L.mapbox.tileLayer('fcc.wnbwewmi');
 var vamap_gridLayer = L.mapbox.gridLayer('fcc.wnbwewmi');
